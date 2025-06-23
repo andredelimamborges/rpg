@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Princesa Lunar: Um Convite para as Terras Intermédias Sombrias</title>
+    <meta name="description" content="Convite para um RPG inspirado em Elden Ring (Princesa Lunar - Ranni)">
+    <link rel="icon" href="favicon.ico"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variáveis de Cor (Tema Ranni) */
+        :root {
+            --color-dark-blue: #0A192F; /* Um azul bem escuro, quase preto */
+            --color-mid-blue: #1A3E5C; /* Azul médio para fundos de seções */
+            --color-ranni-blue: #6A8EAD; /* Azul característico da Ranni, um tom mais acinzentado */
+            --color-highlight-blue: #ADD8E6; /* Azul claro, quase branco, para destaques */
+            --color-white: #FFFFFF; /* Branco puro */
+            --color-light-gray: #E0E0E0; /* Cinza claro para textos gerais */
+            --font-primary: 'Cinzel', serif;
+            --font-secondary: 'Lora', serif;
+        }
+
+        /* Estilos Globais */
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-secondary);
+            color: var(--color-light-gray);
+            line-height: 1.6;
+            background-color: var(--color-dark-blue);
+            overflow-x: hidden;
+            cursor: none; /* Esconde o cursor padrão do mouse */
+        }
+
+        /* Background Souls-like */
+        .souls-background {
+            min-height: 100vh;
+            background-image: url('elden-ring-bg-ranni.jpg'); /* Altere para o caminho da sua imagem */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .souls-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 1;
+        }
+
+        /* Container Principal */
+        .container {
+            background-color: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--color-ranni-blue);
+            box-shadow: 0 0 20px rgba(106, 142, 173, 0.5);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 8px;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(106, 142, 173, 0.6);
+        }
+
+        .header h1 {
+            font-family: var(--font-primary);
+            font-size: 3.5em;
+            color: var(--color-highlight-blue);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--color-ranni-blue);
+            display: inline-block;
+            padding-bottom: 5px;
+            /* Animação do Título */
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from {
+                text-shadow: 2px 2px 8px rgba(106, 142, 173, 0.6);
+                transform: scale(1);
+            }
+            to {
+                text-shadow: 2px 2px 12px rgba(173, 216, 230, 0.8), 0 0 15px rgba(173, 216, 230, 0.5);
+                transform: scale(1.01);
+            }
+        }
+
+        .header h2 {
+            font-family: var(--font-secondary);
+            font-size: 1.5em;
+            color: var(--color-light-gray);
+            font-style: italic;
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid rgba(106, 142, 173, 0.4);
+            border-radius: 5px;
+            background-color: var(--color-mid-blue);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h3 {
+            font-family: var(--font-primary);
+            color: var(--color-highlight-blue);
+            font-size: 2em;
+            margin-top: 0;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(106, 142, 173, 0.5);
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: var(--color-light-gray);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        ul li {
+            background-color: rgba(26, 62, 92, 0.6);
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-left: 3px solid var(--color-highlight-blue);
+            color: var(--color-white);
+        }
+
+        /* Botão de Chamada para Ação */
+        .call-to-action-button {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding: 15px 30px;
+            background-color: var(--color-ranni-blue);
+            color: var(--color-white);
+            font-family: var(--font-primary);
+            font-size: 1.3em;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer; /* Volta o cursor para o padrão no botão */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+        }
+
+        .call-to-action-button:hover {
+            background-color: #85A3C0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(106, 142, 173, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(106, 142, 173, 0.3);
+            font-size: 0.9em;
+            color: rgba(224, 224, 224, 0.7);
+        }
+
+        /* Espada Seguidora de Mouse */
+        #sword-cursor {
+            position: fixed;
+            pointer-events: none;
+            width: 100px; /* Tamanho da espada, ajustado conforme sua preferência */
+            height: auto;
+            transform: translate(-50%, -50%) rotate(45deg);
+            z-index: 9999;
+            opacity: 0.9;
+            filter: drop-shadow(0 0 5px var(--color-highlight-blue));
+            transition: transform 0.05s linear;
+        }
+
+        /* GIFs Laterais - **MODIFICADO AQUI** */
+        .side-gif {
+            position: fixed;
+            top: 0; /* Começa no topo */
+            height: 100vh; /* Ocupa 100% da altura da viewport */
+            width: auto; /* Ajusta a largura automaticamente para manter a proporção */
+            z-index: 0; /* Abaixo do conteúdo principal */
+            opacity: 0.7; /* Sutilmente transparente */
+            filter: drop-shadow(0 0 8px rgba(173, 216, 230, 0.7)); /* Brilho azulado */
+            object-fit: cover; /* Garante que o GIF preencha o espaço sem distorcer */
+        }
+
+        .side-gif.left {
+            left: 0; /* Coloca o GIF na borda esquerda */
+        }
+
+        .side-gif.right {
+            right: 0; /* Coloca o GIF na borda direita */
+        }
+
+        /* Responsividade para os GIFs - **MODIFICADO AQUI** */
+        @media (max-width: 1024px) {
+             .side-gif {
+                display: none; /* Esconde os GIFs em telas menores para não atrapalhar */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .header h2 {
+                font-size: 1.2em;
+            }
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            section {
+                padding: 15px;
+            }
+            h3 {
+                font-size: 1.8em;
+            }
+            .call-to-action-button {
+                padding: 12px 25px;
+                font-size: 1.1em;
+            }
+            #sword-cursor {
+                width: 70px; /* Espada menor em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="souls-background">
+        <main class="container">
+            <header class="header">
+                <h1>Princesa Lunar</h1>
+                <h2>Um Convite para as Terras Intermédias Sombrias</h2>
+            </header>
+
+            <section class="lore-section">
+                <h3>O Chamado de uma Nova Era</h3>
+                <p>
+                    Nas brumas de um reino desolado, onde a vontade dos antigos deuses
+                    se desfez em pó e as estrelas guiam apenas os mais tolos, um novo
+                    destino aguarda. Inspirados pela melancolia e a busca pela Princesa
+                    Lunar, convidamos você a forjar seu próprio caminho nas sombras de
+                    um mundo à beira do colapso.
+                </p>
+                <p>
+                    Este não é um convite para os corações fracos, mas para aqueles que
+                    ousam desafiar o destino, forjar pactos com entidades esquecidas e
+                    enfrentar horrores indizíveis em busca de um fragmento de esperança.
+                    A soberania dos Deuses falhou, e agora, a Era das Estrelas está ao
+                    alcance daqueles com coragem para reivindicá-la.
+                </p>
+            </section>
+
+            <section class="details-section">
+                <h3>Detalhes da Aventura</h3>
+                <ul>
+                    <li>Sistema: D&D 5e</li>
+                    <li>Temática: Exploração, mistério, escolhas morais.</li>
+                    <li>Vagas: 4 </li>
+                    <li>Plataforma: Discord e Ownbear (sujeitos a mudanças)</li>
+                    <li>
+                        Data de Início: Após termino de alguma mesa, perto do fim do ano.
+                    </li>
+                    <li>
+                        Esta aventura é inspirada no universo de Elden Ring e utilizará seu rico lore como base para os backgrounds dos personagens. Caso tenha ideias ou inspirações para seu personagem, contate o Mestre da Campanha.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="cta-section">
+                <h3>Junte-se à Jornada!</h3>
+                <p>
+                    O caminho é árduo, e a escuridão espreita em cada canto. Se você
+                    está pronto para aceitar o desafio e reescrever o destino das Terras
+                    Intermédias, clique no botão abaixo.
+                </p>
+                <a
+                    href="https://discord.gg/Kg8AKjHB42"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="call-to-action-button"
+                >
+                    Aceitar o Chamado da Lua
+                </a>
+            </section>
+
+            <footer class="footer">
+                <p>
+                    &copy; 2025 Seu Nome/Grupo. Todos os direitos reservados aos
+                    Senhores de Cinzas.
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <img id="sword-cursor" src="dark-moon-greatsword.png" alt="Espada Lunar Negra">
+
+    <img class="side-gif left" src="ranni.gif" alt="Ranni em uma lateral">
+    <img class="side-gif right" src="ranni.gif" alt="Ranni na outra lateral">
+
+    <script>
+        // JavaScript para a espada seguir o mouse
+        const swordCursor = document.getElementById('sword-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            swordCursor.style.left = e.clientX + 'px';
+            swordCursor.style.top = e.clientY + 'px';
+        });
+
+        // Opcional: Esconder a espada quando o mouse sair da janela
+        document.addEventListener('mouseleave', () => {
+            swordCursor.style.display = 'none';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            swordCursor.style.display = 'block';
+        });
+
+        // Opcional: Adicionar um efeito de clique ou hover na espada
+        document.addEventListener('mousedown', () => {
+            swordCursor.style.transition = 'transform 0.1s ease-out';
+            swordCursor.style.transform = 'translate(-50%, -50%) rotate(60deg) scale(0.9)';
+        });
+
+        document.addEventListener('mouseup', () => {
+            swordCursor.style.transition = 'transform 0.05s linear'; // Volta à transição padrão
+            swordCursor.style.transform = 'translate(-50%, -50%) rotate(45deg)';
+        });
+
+    </script>
+</body>
+</html>
