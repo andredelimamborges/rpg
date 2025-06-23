@@ -10,19 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* Variáveis de Cor (Tema Ranni) */
+       
         :root {
-            --color-dark-blue: #0A192F; /* Um azul bem escuro, quase preto */
-            --color-mid-blue: #1A3E5C; /* Azul médio para fundos de seções */
-            --color-ranni-blue: #6A8EAD; /* Azul característico da Ranni, um tom mais acinzentado */
-            --color-highlight-blue: #ADD8E6; /* Azul claro, quase branco, para destaques */
-            --color-white: #FFFFFF; /* Branco puro */
-            --color-light-gray: #E0E0E0; /* Cinza claro para textos gerais */
+            --color-dark-blue: #0A192F;
+            --color-mid-blue: #1A3E5C; 
+            --color-ranni-blue: #6A8EAD;
+            --color-highlight-blue: #ADD8E6;
+            --color-white: #FFFFFF;
+            --color-light-gray: #E0E0E0; 
             --font-primary: 'Cinzel', serif;
             --font-secondary: 'Lora', serif;
         }
 
-        /* Estilos Globais */
+       
         html, body {
             margin: 0;
             padding: 0;
@@ -32,13 +32,13 @@
             line-height: 1.6;
             background-color: var(--color-dark-blue);
             overflow-x: hidden;
-            cursor: none; /* Esconde o cursor padrão do mouse */
+            cursor: none; 
         }
 
-        /* Background Souls-like */
+      
         .souls-background {
             min-height: 100vh;
-            background-image: url('elden-ring-bg-ranni.jpg'); /* Altere para o caminho da sua imagem */
+            background-image: url('elden-ring-bg-ranni.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -113,7 +113,7 @@
             font-style: italic;
         }
 
-        /* Seções de Conteúdo */
+     
         section {
             margin-bottom: 30px;
             padding: 20px;
@@ -153,7 +153,7 @@
             color: var(--color-white);
         }
 
-        /* Botão de Chamada para Ação */
+      
         .call-to-action-button {
             display: block;
             width: fit-content;
@@ -168,7 +168,7 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
             border: none;
-            cursor: pointer; /* Volta o cursor para o padrão no botão */
+            cursor: pointer; 
             text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
         }
 
@@ -178,7 +178,7 @@
             box-shadow: 0 8px 20px rgba(106, 142, 173, 0.6);
         }
 
-        /* Footer */
+      
         .footer {
             text-align: center;
             margin-top: 40px;
@@ -188,11 +188,11 @@
             color: rgba(224, 224, 224, 0.7);
         }
 
-        /* Espada Seguidora de Mouse */
+    
         #sword-cursor {
             position: fixed;
             pointer-events: none;
-            width: 100px; /* Tamanho da espada, ajustado conforme sua preferência */
+            width: 100px; 
             height: auto;
             transform: translate(-50%, -50%) rotate(45deg);
             z-index: 9999;
@@ -201,30 +201,30 @@
             transition: transform 0.05s linear;
         }
 
-        /* GIFs Laterais - **MODIFICADO AQUI** */
+        
         .side-gif {
             position: fixed;
-            top: 0; /* Começa no topo */
-            height: 100vh; /* Ocupa 100% da altura da viewport */
-            width: auto; /* Ajusta a largura automaticamente para manter a proporção */
-            z-index: 0; /* Abaixo do conteúdo principal */
-            opacity: 0.7; /* Sutilmente transparente */
-            filter: drop-shadow(0 0 8px rgba(173, 216, 230, 0.7)); /* Brilho azulado */
-            object-fit: cover; /* Garante que o GIF preencha o espaço sem distorcer */
+            top: 0; 
+            height: 100vh; 
+            width: auto; 
+            z-index: 0;
+            opacity: 0.7;
+            filter: drop-shadow(0 0 8px rgba(173, 216, 230, 0.7));
+            object-fit: cover; 
         }
 
         .side-gif.left {
-            left: 0; /* Coloca o GIF na borda esquerda */
+            left: 0; 
         }
 
         .side-gif.right {
-            right: 0; /* Coloca o GIF na borda direita */
+            right: 0; 
         }
 
-        /* Responsividade para os GIFs - **MODIFICADO AQUI** */
+      
         @media (max-width: 1024px) {
              .side-gif {
-                display: none; /* Esconde os GIFs em telas menores para não atrapalhar */
+                display: none; 
             }
         }
 
@@ -250,7 +250,7 @@
                 font-size: 1.1em;
             }
             #sword-cursor {
-                width: 70px; /* Espada menor em telas pequenas */
+                width: 70px; 
             }
         }
     </style>
@@ -287,12 +287,12 @@
                     <li>Sistema: D&D 5e</li>
                     <li>Temática: Exploração, mistério, escolhas morais.</li>
                     <li>Vagas: 4 </li>
-                    <li>Plataforma: Discord e Ownbear (sujeitos a mudanças)</li>
+                    <li>Plataforma: Discord e Owlbear (sujeitos a mudanças)</li>
                     <li>
                         Data de Início: Após termino de alguma mesa, perto do fim do ano.
                     </li>
                     <li>
-                        Esta aventura é inspirada no universo de Elden Ring e utilizará seu rico lore como base para os backgrounds dos personagens. Caso tenha ideias ou inspirações para seu personagem, contate o Mestre da Campanha.
+                        Esta aventura é inspirada no universo de Elden Ring e utilizará, e a sua lore do personagem como base para formar a trama principal. Caso tenha ideias ou inspirações para seu personagem, contate o Mestre da Campanha.
                     </li>
                 </ul>
             </section>
@@ -316,7 +316,7 @@
 
             <footer class="footer">
                 <p>
-                    &copy; 2025 Seu Nome/Grupo. Todos os direitos reservados aos
+                    &copy; 2025. Todos os direitos reservados aos
                     Senhores de Cinzas.
                 </p>
             </footer>
@@ -329,7 +329,7 @@
     <img class="side-gif right" src="ranni.gif" alt="Ranni na outra lateral">
 
     <script>
-        // JavaScript para a espada seguir o mouse
+      
         const swordCursor = document.getElementById('sword-cursor');
 
         document.addEventListener('mousemove', (e) => {
@@ -337,7 +337,7 @@
             swordCursor.style.top = e.clientY + 'px';
         });
 
-        // Opcional: Esconder a espada quando o mouse sair da janela
+       
         document.addEventListener('mouseleave', () => {
             swordCursor.style.display = 'none';
         });
@@ -346,7 +346,7 @@
             swordCursor.style.display = 'block';
         });
 
-        // Opcional: Adicionar um efeito de clique ou hover na espada
+     
         document.addEventListener('mousedown', () => {
             swordCursor.style.transition = 'transform 0.1s ease-out';
             swordCursor.style.transform = 'translate(-50%, -50%) rotate(60deg) scale(0.9)';
